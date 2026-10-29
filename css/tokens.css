@@ -1,0 +1,70 @@
+/* Бейт — фирменные токены: шрифты, цвета, паттерн */
+
+/* Заголовки: Ysabeau Office (OFL) с треугольными Л и Д, как в постах кофейни */
+@font-face {
+  font-family: "Beit Display";
+  src: url("../assets/fonts/BeitDisplay-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+/* Текст: Jost (OFL) — свободный аналог Futura PT из постов */
+@font-face {
+  font-family: "Jost";
+  src: url("../assets/fonts/Jost-var.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  /* цвета сняты с постов и меню */
+  --cream: #fff4e0;        /* фон постов */
+  --cream-warm: #fde5c9;   /* текст на терракоте в меню */
+  --terracotta: #bd5e34;   /* крестики, «Majlis» */
+  --clay: #b35d42;         /* фон меню */
+  --clay-shade: #9d523c;   /* тени пальмы и арки в меню */
+  --sky: #afdef0;          /* голубой фон постов */
+  --sky-logo: #b7e0ef;     /* логотип на фото */
+  --dusk: #b2ccdd;         /* голубой иллюстрации */
+  --wine: #561b10;         /* текст */
+
+  --font-display: "Beit Display", "Ysabeau Office", Optima, serif;
+  --font-text: "Jost", "Futura PT", Futura, system-ui, sans-serif;
+
+  /* шаг паттерна: один крестик */
+  --x: 10px;
+}
+
+/* Полоса из трёх рядов крестиков. Цвет — через --band */
+.x-band {
+  height: calc(var(--x) * 3);
+  background-color: var(--band, var(--terracotta));
+  -webkit-mask: url("../assets/brand/band.svg") 0 0 / auto 100% round no-repeat;
+          mask: url("../assets/brand/band.svg") 0 0 / auto 100% round no-repeat;
+}
+
+.x-band--v {
+  height: auto;
+  width: calc(var(--x) * 3);
+  -webkit-mask: url("../assets/brand/band-v.svg") 0 0 / 100% auto no-repeat round;
+          mask: url("../assets/brand/band-v.svg") 0 0 / 100% auto no-repeat round;
+}
+
+.cup {
+  display: block;
+  width: calc(var(--x) * 2);
+  aspect-ratio: 12 / 10;
+  background-color: var(--cup, var(--dusk));
+  -webkit-mask: url("../assets/brand/cup.svg") center / contain no-repeat;
+          mask: url("../assets/brand/cup.svg") center / contain no-repeat;
+}
+
+/* Рамка как в постах: полосы по краям, чашки в углах */
+.x-frame {
+  display: grid;
+  gap: calc(var(--x) * .8);
+  grid-template:
+    calc(var(--x) * 3) minmax(0, 1fr) calc(var(--x) * 3) /
+    calc(var(--x) * 3) minmax(0, 1fr) calc(var(--x) * 3);
+}
+.x-frame > .cup { place-self: center; }

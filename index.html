@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Бейт — кофейня в Самаре · кофе в турке и маджлис</title>
+<meta name="description" content="«Бейт» по-арабски — «дом». Кофейня на Галактионовской, 167: кофе в турке, авторские напитки, маджлис. Ежедневно 09:00–22:00.">
+<meta name="theme-color" content="#FFF4E0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Бейт — кофейня в Самаре">
+<meta property="og:description" content="Кофе в турке, авторские напитки и маджлис. Галактионовская, 167.">
+<!-- сайт-концепт: до согласия владельцев кофейни не показываем его в поиске; убрать при запуске -->
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:url" content="https://ntmsxfiles.github.io/beit/">
+<meta property="og:image" content="https://ntmsxfiles.github.io/beit/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/brand/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/BeitDisplay-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/Jost-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/pour.jpg" as="image">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/site.css">
+<script>
+  // интро показываем один раз за визит и не показываем тем, кто просит меньше анимации
+  (function (d) {
+    d.classList.add('js');
+    try {
+      if (!sessionStorage.getItem('beit-intro') && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        d.classList.add('intro-on');
+        sessionStorage.setItem('beit-intro', '1');
+      }
+    } catch (e) {}
+  })(document.documentElement);
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Бейт",
+  "description": "Кофейня, вдохновлённая арабской культурой: кофе в турке, авторские напитки, маджлис.",
+  "telephone": "+79397119099",
+  "servesCuisine": "Кофе",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Галактионовская ул., 167",
+    "addressLocality": "Самара",
+    "postalCode": "443001",
+    "addressCountry": "RU"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 53.198942, "longitude": 50.1075996 },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "09:00", "closes": "22:00"
+  }],
+  "hasMap": "https://yandex.ru/maps/org/beyt/173025442502/"
+}
+</script>
+</head>
+<body>
+
+<div class="intro" aria-hidden="true">
+  <div class="intro-logo"><svg viewBox="0 0 675 240"><use href="assets/brand/beit-logo.svg#logo"/></svg></div>
+  <div class="x-band"></div>
+</div>
+
+<header class="site-header" id="top">
+  <a class="brand" href="#top" aria-label="Бейт — наверх">
+    <svg viewBox="0 0 675 240" aria-hidden="true"><use href="assets/brand/beit-logo.svg#logo"/></svg>
+  </a>
+  <nav class="nav" aria-label="Разделы">
+    <a href="#about">О нас</a>
+    <a href="#majlis">Маджлис</a>
+    <a href="#menu">Меню</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#visit">Контакты</a>
+  </nav>
+  <div class="header-meta">
+    <a href="tel:+79397119099">+7 939 711-90-99</a>
+  </div>
+  <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobile-nav"><i></i><i></i></button>
+</header>
+
+<div class="mobile-nav" id="mobile-nav">
+  <nav aria-label="Разделы">
+    <a href="#about">О нас</a>
+    <a href="#majlis">Маджлис</a>
+    <a href="#menu">Меню</a>
+    <a href="#gallery">Галерея</a>
+    <a href="#visit">Контакты</a>
+  </nav>
+  <div>
+    <div class="meta">
+      <span>Галактионовская, 167</span>
+      <span>Ежедневно 09:00–22:00</span>
+      <a href="tel:+79397119099">+7 939 711-90-99</a>
+    </div>
+    <div class="x-band"></div>
+  </div>
+</div>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <h1 class="hero-logo" data-reveal="wipe">
+        <svg viewBox="0 0 675 240" role="img" aria-label="Бейт"><use href="assets/brand/beit-logo.svg#logo"/></svg>
+      </h1>
+      <div class="hero-row">
+        <div class="hero-intro" data-reveal style="--d:.45s">
+          <p class="hero-lead">«Бейт» по-арабски значит «дом». Кофейня, вдохновлённая арабской культурой: кофе в турке, авторские напитки и маджлис с низкими креслами.</p>
+          <div class="hero-cta">
+            <a class="btn btn--fill" href="#menu">Меню</a>
+            <a class="link" href="#visit">Как добраться</a>
+          </div>
+        </div>
+        <figure class="hero-photo arch grain" data-reveal="zoom" data-parallax=".06" style="--d:.2s">
+          <img src="assets/img/pour.jpg" alt="Кофе наливают из медной турки в чашку с голубым орнаментом" width="1400" height="1867" fetchpriority="high">
+        </figure>
+        <dl class="hero-facts" data-reveal style="--d:.55s">
+          <div><dt>Адрес</dt><dd>Самара, Галактионовская, 167</dd></div>
+          <div><dt>Часы</dt><dd>Ежедневно 09:00–22:00</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <a class="marquee" href="#menu" aria-label="Перейти к меню">
+    <div class="marquee-track" aria-hidden="true">
+      <div class="marquee-group">
+        <span>Кофе в турке</span><i class="mark-x"></i>
+        <span>Ночь в Дамаске</span><i class="mark-x"></i>
+        <span>Карак чай</span><i class="mark-x"></i>
+        <span>Сад Шахерезады</span><i class="mark-x"></i>
+        <span>Финиковая ночь</span><i class="mark-x"></i>
+        <span>Осень в Исфахане</span><i class="mark-x"></i>
+        <span>Хальва латте</span><i class="mark-x"></i>
+      </div>
+      <div class="marquee-group">
+        <span>Кофе в турке</span><i class="mark-x"></i>
+        <span>Ночь в Дамаске</span><i class="mark-x"></i>
+        <span>Карак чай</span><i class="mark-x"></i>
+        <span>Сад Шахерезады</span><i class="mark-x"></i>
+        <span>Финиковая ночь</span><i class="mark-x"></i>
+        <span>Осень в Исфахане</span><i class="mark-x"></i>
+        <span>Хальва латте</span><i class="mark-x"></i>
+      </div>
+    </div>
+  </a>
+
+  <section class="section screen" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <h2 class="display about-title lettering" data-reveal="wipe"><span class="sr-only">Бейт — значит дом</span><span class="w"><svg viewBox="0 0 893 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#about-0"/></svg></span><span class="w"><svg viewBox="0 0 1022 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#about-1"/></svg></span><span class="w"><svg viewBox="0 0 591 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#about-2"/></svg></span></h2>
+        <figure class="about-photo arch grain" data-reveal="zoom" data-parallax=".08">
+          <img src="assets/img/table-set.jpg" alt="Медная турка, стакан воды, чашка и марокканские стаканы на подносе" width="1290" height="1720" loading="lazy">
+        </figure>
+        <div class="about-text" data-reveal style="--d:.15s">
+          <h3>О кофейне</h3>
+          <p>Бейт открыли в центре Самары в августе 2026 года. Интерьер собран из вещей разных стран: марокканские столики, индийское зеркало, французская посуда, винтажная мебель, работы российских дизайнеров и живые цветы.</p>
+          <p>В зале две зоны. В европейской — высокие столы. В восточной — маджлис: низкая посадка и мягкие кресла. Ещё есть отдельная комната для намаза, где можно переодеться или покормить ребёнка.</p>
+          <ul class="facts">
+            <li><i class="mark-x"></i>Кофе в турке по трём рецептам</li>
+            <li><i class="mark-x"></i>Летняя веранда</li>
+            <li><i class="mark-x"></i>Кофе с собой</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="container">
+      <i class="cup" data-reveal></i>
+      <blockquote data-reveal style="--d:.1s">«Здесь кофе не&nbsp;просто пьют: им встречают, угощают и&nbsp;начинают разговор»</blockquote>
+    </div>
+  </section>
+
+  <figure class="wide-photo grain" data-parallax=".05">
+    <img src="assets/img/coffee-velvet.webp" alt="Чашка кофе и стакан воды на деревянном подносе, на бархатном диване" width="1024" height="1024" loading="lazy">
+  </figure>
+
+  <section class="majlis section screen" id="majlis">
+    <div class="container majlis-grid">
+      <div class="majlis-art x-frame" data-reveal>
+        <i class="cup"></i><div class="x-band"></div><i class="cup"></i>
+        <div class="x-band x-band--v"></div>
+        <div class="art"><img src="assets/img/majlis-drawing.jpg" alt="Линейный рисунок зоны маджлиса в Бейт" width="1106" height="1114" loading="lazy"></div>
+        <div class="x-band x-band--v"></div>
+        <i class="cup"></i><div class="x-band"></div><i class="cup"></i>
+      </div>
+      <div class="majlis-text">
+        <h2 class="h2 lettering" data-reveal="wipe"><span class="sr-only">Маджлис — место, где собираются</span><span class="w"><svg viewBox="0 0 1561 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#majlis-0"/></svg></span><span class="w"><svg viewBox="0 0 964 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#majlis-1"/></svg></span><span class="w"><svg viewBox="0 0 489 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#majlis-2"/></svg></span><span class="w"><svg viewBox="0 0 1808 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#majlis-3"/></svg></span></h2>
+        <p data-reveal style="--d:.15s">Название происходит от арабского jalasa — «сидеть». Маджлис — это комната для гостей. Здесь принимали друзей, вели долгие беседы, обсуждали новости, поэзию, торговлю и философию.</p>
+        <p data-reveal style="--d:.2s">В Бейт мы бережно перенесли эту традицию в современное пространство: низкая посадка, марокканские столики и кресла, чтобы собраться за дружеской беседой, замедлиться и выпить чашечку кофе.</p>
+        <p class="note" data-reveal style="--d:.25s"><i class="mark-x"></i>В 2015 году традиция маджлиса включена в список нематериального культурного наследия ЮНЕСКО.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section screen" id="cezve">
+    <div class="container cezve-grid">
+      <figure class="cezve-photo arch grain" data-reveal="zoom" data-parallax=".08">
+        <img src="assets/img/tray.jpg" alt="Поднос с медной туркой, чашкой и стаканом воды" width="1400" height="1863" loading="lazy">
+      </figure>
+      <div class="cezve-body">
+        <h2 class="display lettering" data-reveal="wipe"><span class="sr-only">Кофе в турке</span><span class="w"><svg viewBox="0 0 712 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#cezve-0"/></svg></span><span class="w"><svg viewBox="0 0 1073 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#cezve-1"/></svg></span></h2>
+        <p class="cezve-lead" data-reveal style="--d:.15s">Варим в медной турке и подаём со стаканом воды.</p>
+        <ul class="recipes">
+          <li data-reveal><div><h3 class="recipe-name">Турецкий</h3><p>кардамон, шафран</p></div><span class="price">350 ₽</span></li>
+          <li data-reveal style="--d:.1s"><div><h3 class="recipe-name">Марокканский</h3><p>чёрный перец</p></div><span class="price">350 ₽</span></li>
+          <li data-reveal style="--d:.2s"><div><h3 class="recipe-name">Гранатовый</h3><p>гранатовый сок</p></div><span class="price">380 ₽</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="x-band" aria-hidden="true"></div>
+    <div class="section">
+      <div class="container">
+        <div class="menu-head">
+          <h2 class="display lettering" data-reveal="wipe"><span class="sr-only">Меню</span><span class="w"><svg viewBox="0 0 753 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#menu-0"/></svg></span></h2>
+          <div class="legend" data-reveal style="--d:.15s">
+            <span><span class="tag">тёплый</span> согреваем, но можем сделать холодным</span>
+            <span><span class="tag">холодный</span> подаём холодным</span>
+            <span>Цены в рублях, объём в литрах</span>
+          </div>
+        </div>
+        <div class="menu-tabs" id="menu-tabs" role="group" aria-label="Разделы меню" data-reveal></div>
+        <div class="menu-grid" id="menu-grid">
+          <noscript><p>Меню загружается из data/menu.json — включите JavaScript.</p></noscript>
+        </div>
+      </div>
+    </div>
+    <div class="x-band" aria-hidden="true"></div>
+  </section>
+
+  <section class="section screen" id="gallery">
+    <div class="container">
+      <h2 class="display gallery-title lettering" data-reveal="wipe"><span class="sr-only">Галерея</span><span class="w"><svg viewBox="0 0 1130 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#gallery-0"/></svg></span></h2>
+      <div class="gallery-grid">
+        <figure class="grain" data-reveal="zoom"><img src="assets/img/majlis-chair.jpg" alt="Кресло с узором ёлочкой рядом с резным столиком" width="1400" height="1307" loading="lazy" style="object-position: 70% 50%"></figure>
+        <figure class="grain" data-reveal="zoom" data-drift="-70" style="--d:.1s"><img src="assets/img/cup-velvet.jpg" alt="Чашка кофе на деревянном подносе" width="1024" height="1024" loading="lazy"></figure>
+        <figure class="grain" data-reveal="zoom" style="--d:.2s"><img src="assets/img/table-set.jpg" alt="Марокканские стаканы и чайник на медном подносе" width="1290" height="1720" loading="lazy" style="object-position: 30% 20%"></figure>
+        <figure class="grain" data-reveal="zoom" data-drift="-70" style="--d:.3s"><img src="assets/img/interior.jpg" alt="Терракотовые кресла у окна, ниша с книгами и розы" width="1359" height="633" loading="lazy" style="object-position: 64% 50%"></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section visit screen" id="visit">
+    <div class="container visit-grid">
+      <div class="visit-text">
+        <h2 class="display lettering" data-reveal="wipe"><span class="sr-only">Как нас найти</span><span class="w"><svg viewBox="0 0 517 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#visit-0"/></svg></span><span class="w"><svg viewBox="0 0 525 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#visit-1"/></svg></span><span class="w"><svg viewBox="0 0 878 292" aria-hidden="true"><use href="assets/brand/lettering.svg?v=2#visit-2"/></svg></span></h2>
+        <dl class="visit-list" data-reveal style="--d:.15s">
+          <div><dt>Адрес</dt><dd>Самара, Галактионовская, 167</dd></div>
+          <div><dt>Часы</dt><dd>Ежедневно 09:00–22:00</dd></div>
+          <div><dt>Телефон</dt><dd><a href="tel:+79397119099">+7 939 711-90-99</a></dd></div>
+        </dl>
+        <div class="visit-cta" data-reveal style="--d:.25s">
+          <a class="btn btn--fill" href="https://yandex.ru/maps/org/beyt/173025442502/" target="_blank" rel="noopener">Маршрут в Яндекс Картах</a>
+          <a class="btn btn--line" href="tel:+79397119099">Позвонить</a>
+        </div>
+      </div>
+      <div class="visit-map x-frame" data-reveal style="--d:.15s">
+        <i class="cup"></i><div class="x-band"></div><i class="cup"></i>
+        <div class="x-band x-band--v"></div>
+        <a class="map" href="https://yandex.ru/maps/org/beyt/173025442502/" target="_blank" rel="noopener" aria-label="Открыть Бейт в Яндекс Картах">
+          <img src="assets/img/map.jpg" alt="Карта: Галактионовская, 167, на углу с Ульяновской" width="1280" height="1024" loading="lazy">
+          <span class="map-pin"><i class="cup"></i></span>
+          <small class="map-credit">© участники OpenStreetMap</small>
+        </a>
+        <div class="x-band x-band--v"></div>
+        <i class="cup"></i><div class="x-band"></div><i class="cup"></i>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="x-band" aria-hidden="true"></div>
+  <div class="container">
+    <div class="footer-top">
+      <p>Самара, Галактионовская, 167</p>
+      <p>Ежедневно 09:00–22:00</p>
+      <p><a href="tel:+79397119099">+7 939 711-90-99</a></p>
+    </div>
+    <div class="footer-logo" data-reveal="wipe"><svg viewBox="0 0 675 240" role="img" aria-label="Бейт"><use href="assets/brand/beit-logo.svg#logo"/></svg></div>
+    <div class="footer-bottom">
+      <span>© 2026 Бейт</span>
+      <a href="#top">Наверх</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/site.js" defer></script>
+</body>
+</html>
